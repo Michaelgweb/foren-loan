@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://loan.adcpa.live';
+const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://loan-server-1-do86.onrender.com';
 
 const api = axios.create({
   baseURL,
