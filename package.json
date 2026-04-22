@@ -1,5 +1,5 @@
 {
-  "name": "adcpa-frontend",
+  "name": "MFDP",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "node ./node_modules/vite/bin/vite.js build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .jsx,.js",
     "format": "prettier --write ."
