@@ -1,16 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-import svgr from 'vite-plugin-svgr'; // <-- এইটা অবশ্যই যোগ করতে হবে
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import svgr from 'vite-plugin-svgr'
+import path from 'path'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    svgr(), // <-- plugin register
-  ],
+  plugins: [react(), svgr()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(process.cwd(), 'src'),
     },
   },
-});
+})
