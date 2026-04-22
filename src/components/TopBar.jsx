@@ -51,7 +51,7 @@ const TopBar = () => {
   const getImageUrl = (path) => {
     if (!path) return null;
     if (path.startsWith("http")) return path;
-    return `https://loan.adcpa.live${path}`;
+    return `https://loan-server-1-do86.onrender.com${path}`;
   };
 
   return (
