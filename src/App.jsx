@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 
-import Profile from "./pages/Profile";
+import Profile from "./pages/profile";
 import ChangePassword from "./pages/ChangePassword";
 import Terms from "./pages/Terms";
 import PersonalInfo from "./pages/PersonalInfo";
