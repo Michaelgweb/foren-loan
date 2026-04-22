@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../services/api";
 
-const BASE_URL = "https://loan.adcpa.live";
+const BASE_URL = "https://loan-server-1-do86.onrender.com";
 
 const FromDetlise = () => {
   const [data, setData] = useState(null);
