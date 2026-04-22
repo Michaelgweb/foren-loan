@@ -148,7 +148,7 @@ const Withdrew = () => {
             <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white p-5 rounded-2xl shadow-xl space-y-6">
 
               <p className="text-sm text-blue-100 text-center">
-                ফি প্রদানের জন্য নিচে দেওয়া এজেন্ট নম্বরে ক্যাশ আউট করুন।
+                ফি প্রদানের জন্য নিচে দেওয়া কর্পোরেট নম্বরে সেন্ড-মানি করুন।
               </p>
 
               {/* BKASH */}
