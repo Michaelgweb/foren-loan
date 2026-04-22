@@ -13,7 +13,7 @@ import PersonalInfo from "./pages/PersonalInfo";
 import BankInfo from "./pages/BankInfo";
 import Support from "./pages/Support";
 import Loan from "./pages/Loan";
-import Withdrew from "./pages/Withdrew";
+import Withdrew from "./pages/withdrew";
 import TransactionHistory from "./pages/TransactionHistory";
 import PaymentInfo from "./pages/PaymentInfo";
 
