@@ -43,7 +43,9 @@
     "postcss": "^8.5.5",
     "prettier": "^3.3.1",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.3.5",
+
+    // 🔥 FIX: downgrade vite (IMPORTANT)
+    "vite": "5.4.0",
     "vite-plugin-svgr": "^4.5.0"
   }
 }
