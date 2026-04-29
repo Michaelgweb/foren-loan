@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import api from "../services/api";
 
-import From from "../components/from";
-import FromDetlise from "../components/fromdetlise";
+import KycForm from "../components/kyc/KycForm";
+import KycDetails from "../components/fromdetlise";
 
 import backIcon from "../assets/icons/back.png";
 
@@ -24,7 +24,7 @@ const PersonalInfo = () => {
 
       setData(res.data);
     } catch (err) {
-      console.error(err);
+      console.error("KYC FETCH ERROR:", err);
       setData(null);
     } finally {
       setLoading(false);
@@ -32,19 +32,20 @@ const PersonalInfo = () => {
   };
 
   if (loading) {
-    return (
-      <div className="text-center mt-10">
-        লোড হচ্ছে...
-      </div>
-    );
+    return <div className="text-center mt-10">লোড হচ্ছে...</div>;
   }
 
-  const hasKyc = data?.nid_number && data?.nominee_name;
+  // ✅ STRONG CHECK (IMPORTANT FIX)
+  const hasKyc =
+    data &&
+    (data.personal_info_submitted === true ||
+      data.nid_number ||
+      data.full_name);
 
   return (
     <div className="min-h-screen bg-gray-100">
 
-      {/* ================= TOP BAR ================= */}
+      {/* TOP BAR */}
       <div className="bg-blue-600 text-white flex items-center gap-3 px-4 py-3 shadow">
 
         <img
@@ -55,17 +56,18 @@ const PersonalInfo = () => {
         />
 
         <h1 className="text-lg font-semibold">
-         ব্যক্তিগত তথ্য
+          ব্যক্তিগত তথ্য
         </h1>
       </div>
 
-      {/* ================= BODY ================= */}
+      {/* BODY */}
       <div className="p-3">
 
+        {/* ✅ FIXED ROUTE LOGIC */}
         {hasKyc ? (
-          <FromDetlise data={data} />
+          <KycDetails data={data} />
         ) : (
-          <From />
+          <KycForm onSuccess={fetchData} />
         )}
 
       </div>
